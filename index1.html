@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/7ce396367e.js" crossorigin="anonymous">
+</script>
+
+</head>
+<body>
+    <header>
+        <div class="container left">
+            <div class="logo"> <img src="https://www.myresponsee.com/shop/img/logo.svg"></div>
+            
+            
+          
+             </div>
+        </div>
+        <nav>
+            <div class="container menu">
+                <div><ul class="menu">
+                    <li><a onclick="aktivieren(this)">Home</a></li>
+                    <li><a onclick="aktivieren(this)">Catalog</a></li>
+                    <li><a onclick="aktivieren(this)">Product</a></li>
+                    <li><a onclick="aktivieren(this)">Contact</a></li>
+                    </ul> 
+                </div>
+                <div class="right"> 
+                    <div class="korb">
+                        <i class="fas fa-shopping-cart" onclick="shoppingChart();"></i><div id="kreis"><span id="item"></span></div><span id="guthaben">Guthaben:1500</span>
+                    </div>
+                    <div id="chart">
+                        <h3>Shopping Chart</h3>
+                        <div id="sell">
+                           
+                        </div>
+                        <div class="sum"><span id="sumKosten"></span></div>
+                        <button onclick="kaufen()">Kaufen</button>
+                        <div id="meldung"></div>
+                     </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="container content">
+        <aside>
+            <h3>Select Category</h3>
+            <ul><li><a href="index.html"><i class="fas fa-male"></i>Herrenuhr</a></li>
+                <li><a href="index1.html"><i class="fas fa-female"></i>Dammenuhr</a></li>
+                <li><a href="index2.html"><i class="fas fa-child"></i>Kinderuhr</a></li>
+            </ul> 
+            
+            
+            </aside>
+        <div class="product">
+            <h1>Products</h1>
+            <div class="products">
+                <div class="card">
+                <span>Fossil 1</span>
+                <div class="bild"><img src="https://der-uhren-shop.de/media/image/fa/b2/b8/2_1258_lrg_200x200.jpg"></div>
+                <div class="price">
+                    <div><span>145,- €</span></div>
+                    <div>
+                        <button onclick="yaz('Seiko 1',145);">Add to Chart</button></div>
+
+                </div></div>
+            
+                <div class="card">
+                    <span>Fossil 2</span>
+                    <div class="bild"><img src="https://der-uhren-shop.de/media/image/16/3d/4a/2_1738_lrg_200x200.jpg"></div>
+                    <div class="price">
+                        <div><span>165,- €</span></div>
+                        <div><button onclick="yaz('Seiko 2',165);">Add to Chart</button></div>
+    
+                    </div></div>
+            
+                <div class="card">
+                <span>Fossil 3</span>
+                <div class="bild"><img src="https://der-uhren-shop.de/media/image/6c/8e/cf/4aa128efdda206188f81015707ce0ef9_200x200.jpg"></div>
+                <div class="price">
+                    <div><span>245,- €</span></div>
+                    <div><button onclick="yaz('Seiko 3',245);">Add to Chart</button></div>
+        
+                </div>
+                </div>
+
+                <div class="card">
+                <span>Fossil 4</span>
+                <div class="bild"><img src="https://der-uhren-shop.de/media/image/bf/9f/de/c7a524fa0e8e4a6a26823d8e551c3106_200x200.jpg"></div>
+                <div class="price">
+                    <div><span>125,- €</span></div>
+                    <div><button onclick="yaz('Seiko 4',125);">Add to Chart</button></div>
+            
+                </div></div>
+            
+                
+
+
+                
+
+
+
+
+
+                
+            </div>
+            </div>
+
+
+
+
+        
+
+        </div>
+    </main>
+    <footer></footer>
+    <script src="script.js"></script>
+</body>
+</html>

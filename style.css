@@ -1,0 +1,316 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI";
+}
+:root {
+  --boxRadius: 10px;
+  --boxShadow: 0px 1px 14px 2px rgba(59, 59, 59, 0.81);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.left {
+  padding: 25px 0;
+}
+.right {
+  position: relative;
+}
+.korb > i {
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+/************nav****************/
+nav {
+  background-color: rgb(24, 22, 22);
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  display: block;
+  padding: 15px 30px;
+  color: cornsilk;
+  font-size: 1.5em;
+}
+nav a.aktiv {
+  background-color: #d1e098;
+  color: rgb(43, 41, 41);
+}
+nav a:hover:not(a.aktiv) {
+  background-color: rgb(53, 51, 51);
+  color: white;
+}
+#sucheFeld {
+  position: absolute;
+  opacity: 1;
+  width: 200px;
+  height: 62px;
+  background-color: #d1e098;
+  padding: 12px;
+  top: 90px;
+  right: 576px;
+  text-align: center;
+  opacity: 0;
+}
+#sucheFeld input {
+  width: 80%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 1px 8px;
+}
+.right i {
+  color: white;
+  cursor: pointer;
+  transition: color 0.8s;
+  margin: 0;
+}
+.right i:hover {
+  color: rgb(212, 207, 207);
+}
+.right span {
+  color: white;
+}
+#guthaben {
+  margin-left: 10px;
+}
+#kreis {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgb(61, 61, 59);
+  margin-left: 10px;
+  text-align: center;
+  display: none;
+}
+.korb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/************main****************/
+.content {
+  display: flex;
+  padding-top: 50px;
+  text-align: center;
+}
+aside {
+  width: 15%;
+}
+aside ul {
+  margin: 0;
+  padding: 0;
+}
+aside ul li {
+  list-style-type: none;
+  margin-bottom: 5px;
+  text-align: left;
+  border: none;
+  transition: box-shadow 0.5s;
+}
+
+aside i {
+  margin-right: 8px;
+}
+aside a {
+  display: block;
+  font-size: 1.2em;
+  padding: 10px 10px;
+  background-color: #d1e098;
+  border-radius: var(--boxRadius);
+  border: 1px solid rgb(204, 204, 199);
+}
+aside a:hover {
+  background-color: #aebd78;
+}
+aside h3 {
+  text-align: left;
+  margin: 0;
+  height: 60px;
+  margin-bottom: 20px;
+}
+.product {
+  width: 65%;
+  margin: 0 2%;
+}
+.product h1 {
+  margin: 0;
+  height: 60px;
+  margin-bottom: 20px;
+}
+#products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+#products .card {
+  width: 23%;
+  margin-bottom: 30px;
+  border: 1px solid rgb(204, 204, 199);
+  border-radius: var(--boxRadius);
+  transition: box-shadow 0.5s;
+}
+#products .card:hover {
+  box-shadow: var(--boxShadow);
+}
+.card > span {
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: rgb(48, 46, 46);
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgb(204, 204, 199);
+}
+
+.bild {
+  padding: 10px;
+  padding-top: 20px;
+  height: 140px;
+  cursor: pointer;
+}
+.bild img {
+  height: 100%;
+}
+.card .price {
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.price span {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: rgb(48, 46, 46);
+}
+
+/*********CHART**********/
+#chart {
+  display: none;
+  width: 210px;
+  height: auto;
+  position: absolute;
+  padding: 15px;
+  background-color: white;
+  top: 58px;
+  right: 0;
+  border-radius: var(--boxRadius);
+  box-shadow: var(--boxShadow);
+}
+#chart h3 {
+  text-align: center;
+  height: 40px;
+  margin: 0;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-bottom: 1px solid rgb(204, 204, 199);
+}
+#sell ul {
+  margin: 0;
+  padding: 0;
+}
+
+#sell ul li {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  padding-top: 10px;
+  text-align: left;
+}
+.sum {
+  font-size: 1.1em;
+  text-align: left;
+  padding: 5px;
+
+  color: black;
+}
+#sumKosten {
+  color: red;
+  font-style: italic;
+}
+#chart button,
+.price button {
+  width: 100%;
+  padding: 10px;
+  color: black;
+  font-weight: bold;
+
+  margin-bottom: 10px;
+  outline: none;
+  border: none;
+  background-color: #d1e098;
+  cursor: pointer;
+  border-radius: var(--boxRadius);
+}
+#chart button:hover,
+.price button:hover {
+  background-color: #aebd78;
+}
+.price button {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#meldung {
+  padding: 3px 2px;
+  color: #0e0d0d;
+  text-align: center;
+  opacity: 90%;
+  border-radius: 5px;
+}
+/*************************************************/
+/*******popup************************************/
+
+#popup {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#popupFenster {
+  width: 250px;
+  height: 250px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.58);
+
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.unten {
+  display: flex;
+  margin-top: 25px;
+  justify-content: space-between;
+}
+.unten span,
+.unten button {
+  cursor: pointer;
+}

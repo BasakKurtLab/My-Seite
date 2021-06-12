@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/7ce396367e.js" crossorigin="anonymous">
+</script>
+
+
+</head>
+<body>
+    <header>
+        <div class="container left">
+            <div class="logo"> <img src="https://www.myresponsee.com/shop/img/logo.svg"></div>
+            
+            
+          
+             </div>
+        </div>
+        <nav>
+            <div class="container menu">
+                <div><ul class="menu">
+                    <li><a  onclick="aktivieren(this)">Home</a></li>
+                    <li><a  onclick="aktivieren(this)">Catalog</a></li>
+                    <li><a  onclick="aktivieren(this)">Product</a></li>
+                    <li><a  onclick="aktivieren(this)">Contact</a></li>
+                    <li><a  onclick="aktivieren(this) " class="suchen">Suche</a>  
+                        <div id="sucheFeld" >
+                            <input type="text" placeholder="etwas suchen"></div>                 
+                
+                    </li>
+                    
+                </ul> 
+                
+                </div>
+                <div class="right"> 
+                    
+                    <div class="korb">
+                        <i class="fas fa-shopping-cart" onclick="shoppingChart();"></i>
+                        <div id="kreis"><span id="item"></span></div>
+                        <span id="guthaben">Guthaben:1500</span>
+                    </div>
+                    <div id="chart">
+                        <h3>Shopping Chart</h3>
+                        <div id="sell">
+                           
+                        </div>
+                        <div class="sum"><span id="sumKosten"></span></div>
+                        <button onclick="kaufen()">Kaufen</button>
+                        <div id="meldung"></div>
+                     </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="container content">
+        <aside>
+            <h3>Select Category</h3>
+            <ul><li><a href="index.html"><i class="fas fa-male"></i>Herrenuhr</a></li>
+                <li><a href="index1.html"><i class="fas fa-female"></i>Dammenuhr</a></li>
+                <li><a href="index2.html"><i class="fas fa-child"></i>Kinderuhr</a></li>
+            </ul> 
+            
+            
+            </aside>
+        <div class="product">
+            <h1>Products</h1>
+            <div id="products">
+                
+                
+            </div>
+            </div>
+
+
+
+
+        
+
+        </div>
+    </main>
+    <footer></footer>
+    
+
+
+    <div id="popup">
+        <div id="popupFenster">
+            <h4 id="popuph4">Producktname</h4>
+            <span id="popupspan">Preis:500, -€</span>
+                <div class="unten">
+                    <button onclick="indenwarenkorb();">In den Warenkorb</button>
+                    <span onclick="schliessen();" >Schliessen</span>
+
+
+                </div>
+
+
+
+
+        </div>
+
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
